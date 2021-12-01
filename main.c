@@ -10,18 +10,27 @@ int main()
     int i, j;
 
     scanf("%c", &input);
-    while (input != "D")
+    while (input != 'D')
     {
-        if(input=="A"){
-            mat = get_mat();
+        if (input == 'A')
+        {
+            get_mat();
         }
-        if(input=="B"){
+        if (input == 'B')
+        {
             scanf("%d", &i);
             scanf("%d", &j);
-            is_path(i, j);
-            printf("\n");
+            if (is_path(i, j) == 1)
+            {
+                printf("True\n");
+            }
+            else
+            {
+                printf("False\n");
+            }
         }
-        if(input=="C"){
+        if (input == 'C')
+        {
             scanf("%d", &i);
             scanf("%d", &j);
             shortest_path(i, j);

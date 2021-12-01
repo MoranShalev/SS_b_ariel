@@ -20,14 +20,14 @@ int get_mat()
     return 0;
 }
 
-void is_path(int i, int j)
+int is_path(int i, int j)
 {
 
-    if ((mat_dist[i][j] != 0) && (mat_dist != 99999))
+    if ((mat_dist[i][j] != 0) && (mat_dist[i][j] != 99999))
     {
-        printf("True\n");
+        return 1;
     }
-    printf("False\n");
+    return 0;
 }
 
 void calc_dist()
@@ -57,7 +57,7 @@ void calc_dist()
 
 int shortest_path(int i, int j)
 {
-    if (is_path(i, j) == false)
+    if (is_path(i, j) == 0)
     {
         printf("-1\n");
     }
