@@ -6,7 +6,7 @@
 int mat[V][V];
 int mat_dist[V][V];
 
-void get_mat()
+int get_mat()
 {
 
     for (int i = 0; i < 10; i++)
@@ -17,6 +17,7 @@ void get_mat()
         }
     }
     calc_dist();
+    return 0;
 }
 
 void is_path(int i, int j)
@@ -54,7 +55,7 @@ void calc_dist()
     }
 }
 
-void shortest_path(int i, int j)
+int shortest_path(int i, int j)
 {
     if (is_path(i, j) == false)
     {
@@ -64,4 +65,5 @@ void shortest_path(int i, int j)
     {
         printf("%d\n", mat_dist[i][j]);
     }
+    return 0;
 }
